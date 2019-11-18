@@ -1,5 +1,6 @@
 body {
     font-family: Nunito;
+    width: 1440px;
 }
 
 a {
@@ -11,6 +12,14 @@ a {
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+a:hover {
+    color: #E3B873;
+}
+
+a:visited {
+    text-decoration: underline;
 }
 
 h1,
@@ -28,6 +37,13 @@ h1 {
     line-height: 53px;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+@media (max-width: 1300px) {
+    h1 {
+        font-size: 23px;
+        line-height: 132.83%;
+    }
 }
 
 h2 {
@@ -58,7 +74,9 @@ h5 {
     color: #363636;
 }
 
-p, label, input {
+p,
+label,
+input {
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: normal;
@@ -107,19 +125,20 @@ p, label, input {
     color: #FFFFFF;
 }
 
-.text--orange,
-.link-active {
+.text--orange {
     color: #E3B873;
 }
 
 /* ---Header and Footer--- */
-header, footer {
+header,
+footer {
     /* width: 1440px; */
     height: 83px;
     background-color: #131313;
 }
 
-.header, .footer {
+.header,
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,8 +148,13 @@ header, footer {
     padding-right: 60px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1300px) {
     footer {
+        display: none;
+    }
+
+    .header__menu,
+    .header-button {
         display: none;
     }
 }
@@ -177,6 +201,20 @@ header, footer {
 
 .button--transparent {
     background: rgba(255, 245, 215, 0);
+}
+
+@media (max-width: 400px) {
+    .main__text {
+        font-size: 14px;
+        line-height: 135.84%;
+    }
+
+    .main__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 }
 
 /* ---Projects--- */
@@ -270,11 +308,6 @@ header, footer {
     color: #363636;
 }
 
-.control__request>fieldset {
-    outline: none;
-    border: none;
-}
-
 .control__request--label {
     font-size: 13px;
     line-height: 21px;
@@ -285,7 +318,10 @@ header, footer {
     font-size: 14px;
     line-height: 23px;
     color: #363636;
-
+    border: none;
+    border-bottom: 2px solid rgba(48, 46, 46, 0.15);
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .control__request--agree {
