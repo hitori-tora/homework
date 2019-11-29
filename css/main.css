@@ -3,6 +3,12 @@ body {
     width: 1440px;
 }
 
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+}
+
 a {
     font-family: Nunito Sans;
     font-style: normal;
@@ -39,8 +45,11 @@ h1 {
     color: #FFFFFF;
 }
 
-@media (max-width: 1300px) {
-    h1 {
+@media (max-width: 768px) {
+
+    h1,
+    h2,
+    h3 {
         font-size: 23px;
         line-height: 132.83%;
     }
@@ -58,7 +67,6 @@ h3 {
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
-    /* color: #FFFFFF; */
 }
 
 h4 {
@@ -72,6 +80,8 @@ h5 {
     font-size: 18px;
     line-height: 25px;
     color: #363636;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 p,
@@ -98,6 +108,13 @@ input {
     border-style: none;
 }
 
+@media (max-width: 768px) {
+    .button {
+        margin-top: 25px;
+        width: 100%;
+    }
+}
+
 /*.container {
     display: flex;
     margin: 0;
@@ -112,7 +129,7 @@ input {
     font-size: 13px;
     line-height: 27px;
     color: #959595;
-
+    padding-left: 15px;
 }
 
 .price {
@@ -147,10 +164,20 @@ footer {
     padding-right: 60px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
     footer {
         display: none;
     }
+
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 65px;
+        width: 100%;
+
+    }
+
+    .header__phone {}
 
     .header__menu,
     .header-button {
@@ -163,9 +190,14 @@ footer {
 .main {
     width: 100%;
     position: relative;
+    background-image: url("../images/image\ 4.jpg");
+    height: 808px;
+    /* padding-top: 56%; */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.main__tint {
+/* .main__tint {
     position: absolute;
     left: 0;
     right: 0;
@@ -173,7 +205,7 @@ footer {
     bottom: 0;
     opacity: 80%;
     z-index: 1;
-}
+} */
 
 .main__info {
     position: absolute;
@@ -207,17 +239,22 @@ footer {
     padding-right: 23px;
 }
 
-@media (max-width: 400px) {
-    .main__text {
+@media (max-width: 768px) {
+    .main__info {
+        width: 100%;
+        height: 100%;
+        left: 0%;
+        top: 0%;
+        padding: 60px 15px 40px 15px;
+    }
+
+    .main__info--text {
         font-size: 14px;
         line-height: 135.84%;
     }
 
-    .main__info {
-        display: flex;
-        flex-direction: column;
-        margin-left: 18px;
-        margin-right: 18px;
+    .button--transparent {
+        margin-left: 0px;
     }
 }
 
@@ -261,12 +298,6 @@ footer {
     color: #FFFFFF;
 }
 
-@media (min-width: 400px) {
-    .projects__left--img {
-        display: none;
-    }
-}
-
 .projects__right {
     display: flex;
     flex-wrap: wrap;
@@ -287,7 +318,25 @@ footer {
     flex: 2 100%;
 }
 
-@media (max-width: 400px) {
+/*@media (min-width: 768px) {
+    .projects {
+        padding: 18px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects__left--text {
+        font-size: 11px;
+        line-height: 158.48%;
+        text-align: center;
+
+    }
+
+    .projects__left--img {
+        display: none;
+    }
+}
     .projects__right {
         display: none;
     }
@@ -305,7 +354,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-top: -350px;
-    margin-bottom: 75px;
+    margin-bottom: 85px;
 }
 
 .control__title {
@@ -314,7 +363,7 @@ footer {
 
 .control__icon {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
 }
 
@@ -336,6 +385,7 @@ footer {
     font-size: 13px;
     line-height: 21px;
     color: rgba(54, 54, 54, 0.5);
+    margin-right: 30px;
 }
 
 .control__request--field {
@@ -355,11 +405,11 @@ footer {
 
 .control__request--agree {
     font-size: 14px;
-    line-height: 163.68%;
     color: #181818;
+    margin-top: 30px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .control {
         background-color: #131313;
     }
@@ -382,18 +432,25 @@ footer {
     width: 100%;
 }
 
-.repair__title--icon {
-    margin-bottom: 5px;
+.repair__icon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.repair__icon--img {
+    margin: 10px;
 }
 
 .repair-wrap {
     display: flex;
     justify-content: space-evenly;
-    margin: auto;
+    margin-right: 60px;
 }
 
 .repair__info {
-    margin: 30px;
+    margin: 15px;
+    text-align: left;
 }
 
 .repair__info--list {
@@ -402,26 +459,35 @@ footer {
     padding: 20px;
     background-color: white;
     width: 70%;
-    margin-left: 20px;
+    margin-left: 35px;
     position: relative;
+    box-shadow: 7px 7px 10px rgba(184, 183, 183, 0.2);
 }
 
 .repair__info--price {
     background-color: #E3B873;
-    padding: 5px;
+    text-align: center;
+    padding: 1px 2px 1px 2px;
+    width: 50%;
+    z-index: 3;
+    margin-top: -30px;
+    margin-left: 35px;
+    position: relative;
+    box-shadow: 5px 5px 7px rgba(184, 183, 183, 0.2);
 }
 
 /* ---Measurer--- */
+
+.measurer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 150px;
+}
 
 .measurer__list--text {
     font-size: 14px;
     line-height: 19px;
     color: #363636;
-}
-
-.measurer {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .measurer__background {
@@ -448,13 +514,6 @@ footer {
     width: 80%;
 }
 
-.measurer__request--legend {
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
 .measurer__request {
     display: flex;
     flex-wrap: wrap;
@@ -467,8 +526,16 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     background-color: #131313;
-    padding: 30px;
-    width: 100%;
+    padding: 20px 35px 15px 35px;
+    width: 80%;
+    margin-right: 30px;
+}
+
+.measurer__request--legend {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .measurer__request--label {
@@ -478,19 +545,24 @@ footer {
     margin-top: 25px;
 }
 
+.measurer__request--field {
+    width: 100%;
+    margin-top: 7px;
+}
+
 .measurer__request--agree {
     font-size: 14px;
     line-height: 163.68%;
-    /* or 23px */
     color: #FFFFFF;
     margin-top: 25px;
+    align-self: center;
 }
 
 .measurer__request--form button {
     width: 213px;
     height: 51px;
     align-self: flex-end;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .measurer__request--text {
@@ -520,11 +592,10 @@ footer {
     font-weight: normal;
     font-size: 14px;
     line-height: 23px;
-    /* identical to box height */
     color: #FFFFFF;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .measurer {
         display: none;
     }
