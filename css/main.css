@@ -155,6 +155,84 @@ input {
     color: #E3B873;
 }
 
+/*-forms-*/
+
+.measurer__request--form,
+.contacts__questions--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #131313;
+    width: 80%;
+    margin-right: 30px;
+}
+.contacts__questions--form {
+    padding: 20px 50px 15px 50px;
+}
+.measurer__request--form {
+    padding: 20px 35px 15px 35px;
+}
+.measurer__request--legend {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contacts__questions--title {
+    color: #FFFFFF;
+}
+
+.measurer__request--label,
+.contacts__questions--label {
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 25px;
+}
+
+.measurer__request--field,
+.contacts__questions--field {
+    width: 100%;
+    margin-top: 7px;
+    background-color: #131313;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.measurer__request--agree,
+.contacts__questions--agree {
+    font-size: 14px;
+    line-height: 163.68%;
+    color: #FFFFFF;
+    margin-top: 25px;
+    align-self: center;
+}
+
+.measurer__request--form button {
+    width: 213px;
+    height: 50px;
+    align-self: flex-end;
+    margin-top: 40px;
+}
+
+.contacts__questions--form button {
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    margin-top: 40px;
+}
+
+.measurer__request--field::placeholder,
+.contacts__questions--field::placeholder {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+
 /* ---Header and Footer--- */
 
 header,
@@ -269,7 +347,6 @@ footer {
     margin: 0;
     padding-top: 50px;
     padding-bottom: 350px;
-    /* width: 100%; */
     justify-content: space-between;
     background: #131313;
 }
@@ -367,7 +444,6 @@ footer {
 
 .control__icon {
     display: flex;
-    /* flex-wrap: wrap; */
     align-items: center;
 }
 
@@ -539,50 +615,6 @@ footer {
     margin-top: 150px;
 }
 
-.measurer__request--form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #131313;
-    padding: 20px 35px 15px 35px;
-    width: 80%;
-    margin-right: 30px;
-}
-
-.measurer__request--legend {
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.measurer__request--label {
-    font-size: 13px;
-    line-height: 21px;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 25px;
-}
-
-.measurer__request--field {
-    width: 100%;
-    margin-top: 7px;
-}
-
-.measurer__request--agree {
-    font-size: 14px;
-    line-height: 163.68%;
-    color: #FFFFFF;
-    margin-top: 25px;
-    align-self: center;
-}
-
-.measurer__request--form button {
-    width: 213px;
-    height: 51px;
-    align-self: flex-end;
-    margin-top: 40px;
-}
-
 .measurer__request--text {
     font-size: 18px;
     line-height: 26px;
@@ -596,21 +628,6 @@ footer {
 
 .measurer__request p {
     width: 85%;
-}
-
-.measurer__request--field {
-    background-color: #131313;
-    border: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-}
-
-.measurer__request--field::placeholder {
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 23px;
-    color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -707,6 +724,12 @@ footer {
     margin-right: 20px;
 }
 
+@media (max-width: 768px) {
+    .goals {
+        display: none;
+    }
+}
+
 /* ---Team--- */
 .team {
     display: flex;
@@ -778,6 +801,7 @@ footer {
 }
 
 .team__photos--orange {
+    font-family: Yeseva One;
     font-size: 13px;
     line-height: 20px;
     text-align: center;
@@ -794,3 +818,122 @@ footer {
     text-align: center;
     color: #363636;
 }
+
+/* ---Clients--- */
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    background-image: url(../images/Frame.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+.clients__icon {
+    display: flex;
+    align-items: center;
+}
+
+.clients__icon--img {
+    margin: 10px;
+}
+
+.clients__text {
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #363636;
+}
+
+.clients-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 350px;
+}
+
+.clients__item {
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.clients__description {
+    padding: 10px 10px 50px 15px;
+    box-shadow: 7px 7px 10px rgba(184, 183, 183, 0.2);
+}
+
+.round-img {
+    border-radius: 36px;
+    margin: 0 auto;
+}
+
+.clients__description--name {
+    font-family: Yeseva One;
+    font-size: 18px;
+    line-height: 23px;
+    color: #181818;
+    text-align: center;
+}
+
+.clients__description--text {
+    font-size: 13px;
+    line-height: 180%;
+    color: #959595;
+}
+
+.clients__info {
+    width: 70%;
+    margin-top: -30px;
+    display: flex;
+    background-color: #E3B873;
+    color: #FFFFFF;
+    box-shadow: 5px 5px 7px rgba(184, 183, 183, 0.2);
+}
+
+.cliens__info--left,
+.clients__info--right {
+    vertical-align: middle;
+    padding: 2px;
+}
+
+.cliens__info--left {
+    border-right: 1px solid #FFFFFF;
+    padding-right: 10px;
+}
+
+.cliens__info--text {
+    font-family: Yeseva One;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.clients__info--icon {
+    margin: 0px 5px 0px 5px;
+}
+
+@media (max-width: 768px) {
+    .clients {
+        display: none;
+    }
+}
+
+/* ---Contacts--- */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/image\ 7.jpg);
+    background-repeat: no-repeat;
+}
+
+.contacts__questions {
+    width: 50%;
+    margin-top: -210px;
+    align-self: center;
+}
+.contacts__map {
+    margin-bottom: 40px;
+} 
