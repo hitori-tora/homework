@@ -2,6 +2,7 @@ body {
     font-family: Nunito;
     width: 100%;
     margin: 0 auto;
+    background: #363636;
 }
 
 body * {
@@ -136,6 +137,7 @@ input {
 .content {
     width: 1440px;
     margin: 0 auto;
+    background: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -144,29 +146,19 @@ input {
     }
 }
 
-.list {
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 27px;
-    color: #959595;
-    padding-left: 15px;
+.icon {
+    display: flex;
+    align-items: center;
 }
 
-.price {
-    font-family: Yeseva One;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 25px;
-    text-transform: uppercase;
-    color: #FFFFFF;
+.icon-img {
+    margin: 10px;
 }
 
 .text--orange {
     color: #E3B873;
 }
+
 
 /*-forms-*/
 
@@ -255,11 +247,12 @@ input {
     color: #FFFFFF;
 }
 
+
 /* ---Header and Footer--- */
 
 header,
 footer {
-    width: 1440px;
+    width: 100%;
     height: 83px;
     background-color: #131313;
     margin: 0 auto;
@@ -269,6 +262,7 @@ footer {
 .footer {
     display: flex;
     justify-content: space-between;
+    width: 1440px;
     align-items: center;
     margin: 0 auto;
     height: 100%;
@@ -283,6 +277,9 @@ footer {
 
     header {
         height: 65px;
+    }
+
+    .header {
         width: 100%;
     }
 
@@ -351,6 +348,7 @@ footer {
         margin-left: 0px;
     }
 }
+
 
 /* ---Projects--- */
 
@@ -460,6 +458,7 @@ footer {
     }
 }
 
+
 /* ---Control--- */
 
 .control {
@@ -475,15 +474,6 @@ footer {
     color: #FFFFFF;
 }
 
-.control__icon {
-    display: flex;
-    align-items: center;
-}
-
-.control__icon--img {
-    margin: 10px;
-}
-
 .control__text {
     width: 50%;
     font-size: 18px;
@@ -492,6 +482,14 @@ footer {
     color: #363636;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.control__request {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60%;
 }
 
 .control__request--label {
@@ -507,7 +505,7 @@ footer {
     color: #363636;
     border: none;
     border-bottom: 2px solid rgba(48, 46, 46, 0.15);
-    margin-left: 10px;
+    padding-right: 60px;
     margin-right: 10px;
 }
 
@@ -546,7 +544,6 @@ footer {
     }
 
     .control__request {
-        display: flex;
         flex-direction: column;
         justify-content: space-around;
         background-color: #131313;
@@ -575,6 +572,7 @@ footer {
     }
 }
 
+
 /* ---Repair and Design--- */
 
 .repair,
@@ -584,12 +582,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-
-.repair__icon,
-.design__icon {
-    display: flex;
-    align-items: center;
+    margin-top: 40px;
 }
 
 .design__text {
@@ -599,22 +592,39 @@ footer {
     color: #363636;
 }
 
-.repair__icon--img,
-.design__icon--img {
-    margin: 10px;
-}
-
 .repair-wrap,
 .design-wrap {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 60px;
 }
 
 .repair__info,
 .design__info {
     margin: 15px;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 27px;
+    color: #959595;
+    padding-left: 15px;
+}
+
+.price {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
 }
 
 .repair__info--list,
@@ -624,22 +634,22 @@ footer {
     padding: 20px;
     background-color: white;
     width: 70%;
-    margin-left: 35px;
-    position: relative;
-    box-shadow: 7px 7px 10px rgba(184, 183, 183, 0.2);
 }
 
 .repair__info--price,
 .design__info--price {
     background-color: #E3B873;
     text-align: center;
-    padding: 1px 2px 1px 2px;
-    width: 50%;
+    padding: 10px 2px 10px 2px;
+    width: 70%;
     z-index: 3;
-    margin-top: -30px;
-    margin-left: 35px;
-    position: relative;
-    box-shadow: 5px 5px 7px rgba(184, 183, 183, 0.2);
+    margin-top: -20px;
+
+}
+
+.repair__info--list,
+.repair__info--price {
+    box-shadow: 7px 7px 10px rgba(184, 183, 183, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -748,11 +758,10 @@ footer {
 .fantasies {
     background-image: url("../images/Group\ 22.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100% 90%;
     display: flex;
     flex-wrap: nowrap;
     margin-top: 250px;
-    padding-right: 50px;
 }
 
 .fantasies__list {
@@ -764,6 +773,7 @@ footer {
     font-size: 20px;
     line-height: 38px;
     color: #FFFFFF;
+    padding: 0;
 }
 
 .fantasies__central {
@@ -832,6 +842,7 @@ footer {
 
 .goals__left--number {
     color: #FFFFFF;
+    margin-top: 60px;
 }
 
 .goals__left--text {
@@ -884,15 +895,6 @@ footer {
     line-height: 29px;
     text-align: center;
     color: #FFFFFF;
-}
-
-.team__icon {
-    display: flex;
-    align-items: center;
-}
-
-.team__icon--img {
-    margin: 10px;
 }
 
 .team__photos {
@@ -995,15 +997,6 @@ footer {
     background-position: bottom;
 }
 
-.clients__icon {
-    display: flex;
-    align-items: center;
-}
-
-.clients__icon--img {
-    margin: 10px;
-}
-
 .clients__text {
     font-size: 18px;
     line-height: 29px;
@@ -1049,23 +1042,24 @@ footer {
 }
 
 .clients__info {
-    width: 70%;
-    margin-top: -30px;
+    width: 100%;
+    margin-top: -20px;
     display: flex;
     background-color: #E3B873;
     color: #FFFFFF;
-    box-shadow: 5px 5px 7px rgba(184, 183, 183, 0.2);
+    box-shadow: 7px 7px 10px rgba(184, 183, 183, 0.2);
 }
 
 .cliens__info--left,
 .clients__info--right {
-    vertical-align: middle;
-    padding: 2px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
 }
 
 .cliens__info--left {
     border-right: 1px solid #FFFFFF;
-    padding-right: 10px;
 }
 
 .cliens__info--text {
@@ -1074,10 +1068,11 @@ footer {
     line-height: 24px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .clients__info--icon {
-    margin: 0px 5px 0px 5px;
+    margin: 0px 15px 0px 0px;
 }
 
 @media (max-width: 768px) {
@@ -1092,6 +1087,7 @@ footer {
     flex-direction: column;
     align-items: center;
     background-image: url(../images/image\ 7.jpg);
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
