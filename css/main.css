@@ -421,7 +421,7 @@ footer {
 
 @media (max-width: 768px) {
     .projects {
-        padding: 18px;
+        padding: 20px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -490,6 +490,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 60%;
+    margin: 50px 0px 0px 0px;
 }
 
 .control__request--label {
@@ -673,7 +674,7 @@ footer {
     .design {
         background: #131313;
         margin-top: -130px;
-        padding-top: 140px;
+        padding: 140px 20px 20px 20px;
     }
 
     .design__title,
@@ -929,6 +930,7 @@ footer {
     z-index: 2;
     margin-top: -100px;
     background-color: #FFFFFF;
+    box-shadow: 7px 7px 10px rgba(184, 183, 183, 0.2);
 }
 
 .team__photos--text {
@@ -948,6 +950,7 @@ footer {
     background-color: #E3B873;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin: 0;
 }
 
 .team__text {
@@ -1123,6 +1126,7 @@ footer {
 
     .contacts__title {
         order: 1;
+        margin: 20px;
     }
 
     .contacts__icon {
